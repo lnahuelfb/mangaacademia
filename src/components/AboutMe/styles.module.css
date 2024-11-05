@@ -6,9 +6,43 @@
 }
 
 .container {
-  
+  padding: 2rem;
+  background-color: var(--main-bg-color);
+  color: #fff;
+  border-radius: 0.8rem;
+  text-align: center;
 }
 
-.description {
+.details {
+  margin-top: 1.6rem;
+}
 
+.characters {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.characterCard {
+  background-color: #1f1f1f;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  width: 10rem;
+  text-align: center;
+}
+
+.characterImage {
+  width: 100%;
+  border-radius: 0.8rem;
+}
+
+
+.goals {
+  margin-top: 1.6rem;
+}
+
+.container strong,
+.container h3 {
+  color: var(--color-primary);
 }
