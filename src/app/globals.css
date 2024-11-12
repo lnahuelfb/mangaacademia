@@ -16,7 +16,9 @@ body {
   /* Blanco - Texto principal, fondos claros */
   --color-gold: #D4AF37;
   /* Dorado Metálico - Detalles, íconos, bordes o botones especiales */
-  --main-bg-color:  rgba(34, 39, 46, 0.7);;
+  --main-bg-color:  rgba(34, 39, 46, 0.7);
+
+  scroll-behavior: smooth;
 }
 
 * {

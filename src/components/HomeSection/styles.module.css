@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin-top: 7rem;
+  padding-top: 7rem;
 }
 
 .title {

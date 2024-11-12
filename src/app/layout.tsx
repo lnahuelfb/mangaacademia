@@ -4,8 +4,8 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "LNahuelFB",
-  description: "LNahuelFB es un streamer apasionado de Overwatch, conocido por sus habilidades en el juego y su entretenido contenido en vivo.",
+  title: "MangaAcademia",
+  description: "MangaAcademia es un streamer apasionado de Overwatch, conocido por sus habilidades en el juego y su entretenido contenido en vivo.",
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

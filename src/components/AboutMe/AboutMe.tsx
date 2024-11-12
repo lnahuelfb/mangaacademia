@@ -1,5 +1,6 @@
 import styles from './styles.module.css'
 
+
 type Character = {
   name: string;
   role: string;
@@ -7,9 +8,12 @@ type Character = {
 };
 
 const characters: Character[] = [
-  { name: 'Tracer', role: 'Damage', imageUrl: 'https://staticg.sportskeeda.com/editor/2022/10/7ea50-16655649931606-1920.jpg' },
-  { name: 'Winston', role: 'Tank', imageUrl: 'https://www.gamespot.com/a/uploads/original/1727/17277836/4046774-overwatch-2-ashe.jpg' },
-  { name: 'Mercy', role: 'Support', imageUrl: 'https://i.ytimg.com/vi/9acxn7qAST4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBbypTJwBst1X5mJk7LtQ-j4UBN0w' },
+  { name: 'Dva', role: 'Tank', imageUrl: '/dva.png' },
+  { name: 'Junker Queen', role: 'Tank', imageUrl: '/junker-queen.png' },
+  { name: 'Ashe', role: 'Damage', imageUrl: '/ashe.png' },
+  { name: 'Reaper', role: 'Damage', imageUrl: '/reaper.png' },
+  { name: 'Juno', role: 'Support', imageUrl: '/juno.png' },
+  { name: 'Kiriko', role: 'Support', imageUrl: '/kiriko.png' },
 ];
 
 const AboutMe = () => {
