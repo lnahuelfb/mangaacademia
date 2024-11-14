@@ -20,30 +20,11 @@
 
 .characters {
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
-
-.characterCard {
-  background-color: #1f1f1f;
-  padding: 1rem;
-  border-radius: 0.8rem;
-  width: 30%;
-  text-align: center;
-}
-
-.characterImage {
-  width: 80%;
-  border-radius: 0.8rem;
-  transition: all 0.3s ease-in-out;
-  filter: grayscale(1);
-
-  &:hover{
-    filter: grayscale(0);
-  };
-}
-
 
 .goals {
   margin-top: 1.6rem;
@@ -52,4 +33,68 @@
 .container strong,
 .container h3 {
   color: var(--color-primary);
+}
+
+.details h3 {
+  font-size: 2.4rem;
+  margin: 2rem 0;
+}
+
+
+/* Estilos generales de la tarjeta */
+.heroCard {
+  width: 40rem;
+  height: 33rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  transition: height 0.5s, transform 0.5s;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  interpolate-size: allow-keywords;
+}
+
+.heroImage img {
+  width: 100%;
+  border-radius: 1rem;
+  /* 10px */
+  transition: all 0.3s ease-in-out;
+  filter: grayscale(1);
+}
+
+
+.heroInfo {
+  text-align: center;
+  padding: 1rem;
+  /* 10px */
+}
+
+
+.heroDescription {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  overflow: hidden;
+  padding: 1rem;
+  /* 10px */
+  text-align: center;
+}
+
+
+.heroCard:hover {
+  transform: scale(1.1);
+  overflow: visible;
+  height: auto;
+}
+
+.heroCard:hover .heroDescription {
+  opacity: 1;
+  max-height: 10rem;
+}
+
+.heroCard:hover .heroImage img {
+  filter: grayscale(0);
 }

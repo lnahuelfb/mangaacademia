@@ -5,15 +5,46 @@ type Character = {
   name: string;
   role: string;
   imageUrl: string;
+  description: string;
 };
 
 const characters: Character[] = [
-  { name: 'Dva', role: 'Tank', imageUrl: '/dva.png' },
-  { name: 'Junker Queen', role: 'Tank', imageUrl: '/junker-queen.png' },
-  { name: 'Ashe', role: 'Damage', imageUrl: '/ashe.png' },
-  { name: 'Reaper', role: 'Damage', imageUrl: '/reaper.png' },
-  { name: 'Juno', role: 'Support', imageUrl: '/juno.png' },
-  { name: 'Kiriko', role: 'Support', imageUrl: '/kiriko.png' },
+  {
+    name: 'Dva',
+    role: 'Tank',
+    imageUrl: '/dva.png',
+    description: 'Piloto de un mech de combate, D.Va usa su armadura para absorber daño y proteger a su equipo en el campo de batalla.'
+  },
+  {
+    name: 'Junker Queen',
+    role: 'Tank',
+    imageUrl: '/junker_queen.png',
+    description: 'Una líder feroz que pelea cuerpo a cuerpo, Junker Queen utiliza su hacha y habilidades para arrasar con sus enemigos y liderar su equipo.'
+  },
+  {
+    name: 'Ashe',
+    role: 'DPS',
+    imageUrl: '/ashe.png',
+    description: 'Líder de la pandilla Deadlock, Ashe usa su rifle y dinamita para causar daño a distancia y controlar el campo de batalla.'
+  },
+  {
+    name: 'Reaper',
+    role: 'DPS',
+    imageUrl: '/reaper.png',
+    description: 'Un vengador oscuro que utiliza escopetas de corto alcance y habilidades de sigilo para acabar con sus enemigos de cerca.'
+  },
+  {
+    name: 'Juno',
+    role: 'Support',
+    imageUrl: '/juno.png',
+    description: 'Ranger Espacial de Marte con habilidades de soporte y movilidad, ayuda a su equipo desde las alturas.'
+  },
+  {
+    name: 'Kiriko',
+    role: 'Support',
+    imageUrl: '/kiriko.png',
+    description: 'Ninja sanadora que usa habilidades de curación y movilidad para proteger y asistir a sus aliados desde las sombras.'
+  }
 ];
 
 const AboutMe = () => {
@@ -36,11 +67,7 @@ const AboutMe = () => {
         <h3>Mis personajes favoritos en Overwatch 2</h3>
         <div className={styles.characters}>
           {characters.map((character) => (
-            <div key={character.name} className={styles.characterCard}>
-              <img src={character.imageUrl} alt={character.name} className={styles.characterImage} />
-              <h3>{character.name}</h3>
-              <p>{character.role}</p>
-            </div>
+            <HeroCard key={character.name} character={character} />
           ))}
         </div>
       </div>
@@ -54,6 +81,23 @@ const AboutMe = () => {
         </p>
       </div>
     </section>
+  );
+};
+
+const HeroCard = ({ character }: { character: Character }) => {
+  return (
+    <article className={styles.heroCard} aria-label="Hero Card">
+      <figure className={styles.heroImage}>
+        <img src={character.imageUrl} alt={`Imagen de ${character.name}`} />
+      </figure>
+      <section className={styles.heroInfo}>
+        <h3 className={styles.heroName}>{character.name}</h3>
+        <p className={styles.heroRole}>{character.role}</p>
+      </section>
+      <p className={styles.heroDescription}>
+        {character.description}
+      </p>
+    </article>
   );
 };
 
